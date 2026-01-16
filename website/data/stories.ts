@@ -1,0 +1,103 @@
+import type { Story } from '@/types/story';
+
+export const stories: Story[] = [
+  {
+    id: 'story-001',
+    title: 'A Simple Smile Changed Everything',
+    excerpt: 'When Emma noticed a classmate sitting alone every day, her small act of kindness sparked a friendship that transformed both their lives.',
+    content: `When Emma noticed a classmate sitting alone every day, her small act of kindness sparked a friendship that transformed both their lives. Sarah, a student with autism, had struggled to connect with peers. Emma simply sat down next to her at lunch and started drawing—Sarah's favorite activity. What began as shared silence evolved into a deep friendship built on understanding and acceptance. Today, they're inseparable, proving that kindness doesn't require grand gestures—sometimes it just takes showing up.`,
+    category: 'school',
+    author: { name: 'Emma Williams', location: 'Austin, TX' },
+    date: '2024-11-15',
+    image: {
+      src: '/images/stories/story-001.jpg',
+      alt: 'Two students drawing together at a lunch table',
+    },
+    featured: true,
+    tags: ['school', 'friendship', 'inclusion'],
+    metadata: { readTime: 2, likes: 245, shares: 87 },
+  },
+  {
+    id: 'story-002',
+    title: 'The Coffee Shop Connection',
+    excerpt: 'A barista learned sign language to better serve a regular customer with autism, creating a welcoming space for the entire community.',
+    content: `At Corner Café, barista Jake noticed that one of his regular customers, Michael, who has autism, struggled with the noisy environment and verbal communication. Instead of just taking orders, Jake spent his evenings learning basic sign language and created a quiet corner with noise-canceling features. Now, Michael has his own table, and the café has become a safe haven for others in the autism community. What started as one person's kindness has rippled through the entire neighborhood.`,
+    category: 'community',
+    author: { name: 'Jake Martinez', location: 'Portland, OR' },
+    date: '2024-10-22',
+    image: {
+      src: '/images/stories/story-002.jpg',
+      alt: 'A barista communicating with a customer using sign language',
+    },
+    featured: true,
+    tags: ['community', 'accessibility', 'workplace'],
+    metadata: { readTime: 3, likes: 412, shares: 156 },
+  },
+  {
+    id: 'story-003',
+    title: 'The Neighborhood Play Day',
+    excerpt: 'Parents organized an inclusive play day where children of all abilities could play together, breaking down barriers through fun and friendship.',
+    content: `In our suburban neighborhood, parents noticed that children with autism were often isolated from group play activities. Led by the Thompson family, we organized the first "Everyone Plays" day in the local park. We set up sensory-friendly zones, created visual schedules, and educated all parents about neurodiversity. The result? Twenty families showed up, kids of all abilities played together, and what started as a one-time event is now a monthly tradition that's spreading to other neighborhoods.`,
+    category: 'community',
+    author: { name: 'The Thompson Family', location: 'Denver, CO' },
+    date: '2024-09-30',
+    image: {
+      src: '/images/stories/story-003.jpg',
+      alt: 'Children of various abilities playing together in a park',
+    },
+    featured: false,
+    tags: ['community', 'inclusion', 'play'],
+    metadata: { readTime: 3, likes: 189, shares: 72 },
+  },
+  {
+    id: 'story-004',
+    title: "A Brother's Promise",
+    excerpt: "When David's younger brother was diagnosed with autism, he made a promise to always be his advocate and friend—a promise that changed his entire perspective on life.",
+    content: `I was twelve when my brother Alex was diagnosed with autism. At first, I didn't understand why he was "different," but I made a promise to always stand by him. That meant learning about his sensory needs, defending him from bullies, and celebrating his unique way of seeing the world. Now, years later, Alex has taught me more about patience, creativity, and unconditional love than anyone else. He's not just my brother—he's my hero.`,
+    category: 'family',
+    author: { name: 'David Chen', location: 'San Francisco, CA' },
+    date: '2024-08-18',
+    image: {
+      src: '/images/stories/story-004.jpg',
+      alt: 'Two brothers smiling together',
+    },
+    featured: false,
+    tags: ['family', 'sibling', 'advocacy'],
+    metadata: { readTime: 2, likes: 567, shares: 234 },
+  },
+  {
+    id: 'story-005',
+    title: 'The Workplace Champion',
+    excerpt: 'An office manager created an autism-friendly workplace program, proving that inclusion benefits everyone and enhances team productivity.',
+    content: `As office manager at TechCorp, I noticed we were missing out on talented individuals simply because our hiring process wasn't inclusive. I championed creating an autism-friendly workplace program with accommodations like quiet workspaces, clear written instructions, and flexible schedules. We hired three employees on the spectrum, and productivity actually increased across all teams. Their attention to detail and unique problem-solving approaches brought fresh perspectives that benefited everyone.`,
+    category: 'workplace',
+    author: { name: 'Patricia Rodriguez', location: 'Seattle, WA' },
+    date: '2024-07-25',
+    image: {
+      src: '/images/stories/story-005.jpg',
+      alt: 'An inclusive modern office workspace',
+    },
+    featured: false,
+    tags: ['workplace', 'inclusion', 'employment'],
+    metadata: { readTime: 3, likes: 321, shares: 145 },
+  },
+  {
+    id: 'story-006',
+    title: 'The Power of Understanding',
+    excerpt: 'A mother shares how community kindness helped her family navigate autism diagnosis, from neighbors who learned to neighbors who taught others.',
+    content: `When my son Lucas was diagnosed with autism at age three, I felt overwhelmed and alone. Then something amazing happened—our neighbors started reaching out. One brought books about autism, another learned about sensory sensitivities and adjusted their dog's barking training, and others simply offered to babysit so I could attend therapy appointments. What touched me most was when they started educating other neighbors, creating a whole community that understood and embraced Lucas. Today, he walks to the park knowing he's surrounded by friends who accept him exactly as he is.`,
+    category: 'personal',
+    author: { name: 'Maria Gonzalez', location: 'Phoenix, AZ' },
+    date: '2024-12-03',
+    image: {
+      src: '/images/stories/story-006.jpg',
+      alt: 'A young boy walking in a park surrounded by neighbors',
+    },
+    featured: false,
+    tags: ['personal', 'community', 'diagnosis'],
+    metadata: { readTime: 4, likes: 478, shares: 198 },
+  },
+];
+
+export const featuredStories = stories.filter(story => story.featured);
+export const recentStories = stories.slice(0, 3);
