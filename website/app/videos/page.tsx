@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Container } from '@/components/layout';
 import { VideoGrid, YouTubeEmbed, TikTokEmbed } from '@/components/videos';
+import { PremiumSection, PremiumHero } from '@/components/shared';
 import { videos as rawVideos } from '@/data/videos';
 import type { Video as VideoGridVideo } from '@/components/videos/VideoGrid';
 
@@ -41,61 +42,53 @@ export default function VideosPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--color-primary-light)]/10 via-white to-[var(--color-autism-gold)]/10 py-16 lg:py-24">
-        <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Watch <span className="text-gradient-autism">Our Stories</span>
-            </h1>
-            <p className="text-lg text-[var(--color-muted-foreground)]">
-              Experience the power of kindness through our video collection. From personal
-              testimonials to community events, see the impact we&apos;re making together.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PremiumHero
+        title={
+          <>
+            Watch <span className="text-blue-600">Our Stories</span>
+          </>
+        }
+        description="Experience the power of kindness through our video collection. From personal testimonials to community events, see the impact we're making together."
+        background="gradient"
+      />
 
       {/* Featured Video */}
       {featuredVideo && (
-        <section className="section bg-[var(--color-muted)]">
-          <Container>
-            <h2 className="text-2xl font-bold mb-6">Featured Video</h2>
-            <div className="max-w-4xl mx-auto">
-              {featuredVideo.platform === 'youtube' ? (
-                <YouTubeEmbed
-                  videoId={featuredVideo.videoId || ''}
-                  title={featuredVideo.title}
-                />
-              ) : (
-                <TikTokEmbed embedId={featuredVideo.videoId || ''} title={featuredVideo.title} />
+        <PremiumSection background="muted" spacing="md">
+          <h2 className="text-3xl font-bold mb-8 text-center">Featured Video</h2>
+          <div className="max-w-4xl mx-auto">
+            {featuredVideo.platform === 'youtube' ? (
+              <YouTubeEmbed
+                videoId={featuredVideo.videoId || ''}
+                title={featuredVideo.title}
+              />
+            ) : (
+              <TikTokEmbed embedId={featuredVideo.videoId || ''} title={featuredVideo.title} />
+            )}
+            <div className="mt-6">
+              <h3 className="text-2xl font-semibold mb-2">{featuredVideo.title}</h3>
+              {featuredVideo.description && (
+                <p className="text-gray-600 text-lg">
+                  {featuredVideo.description}
+                </p>
               )}
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold">{featuredVideo.title}</h3>
-                {featuredVideo.description && (
-                  <p className="text-[var(--color-muted-foreground)] mt-2">
-                    {featuredVideo.description}
-                  </p>
-                )}
-              </div>
             </div>
-          </Container>
-        </section>
+          </div>
+        </PremiumSection>
       )}
 
       {/* Video Gallery */}
-      <section className="section">
-        <Container>
+      <PremiumSection background="white" spacing="lg">
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-3 mb-10 justify-center">
             {categories.map((cat) => (
               <button
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                   selectedCategory === cat.value
-                    ? 'bg-[var(--color-primary)] text-white'
-                    : 'bg-[var(--color-muted)] text-[var(--color-foreground)] hover:bg-[var(--color-border)]'
+                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg scale-105'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
                 }`}
               >
                 {cat.label}
@@ -116,39 +109,40 @@ export default function VideosPage() {
               </p>
             </div>
           )}
-        </Container>
-      </section>
+      </PremiumSection>
 
       {/* Social CTA */}
-      <section className="section bg-gradient-to-r from-[var(--color-autism-blue)] to-[var(--color-primary)]">
-        <Container>
-          <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Follow Us for More</h2>
-            <p className="text-lg mb-8 opacity-90">
-              Subscribe to our YouTube channel and follow us on TikTok for the latest
-              updates and inspiring content.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://youtube.com/@kindnessforautism"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-lg bg-white text-red-600 hover:bg-gray-100"
-              >
-                Subscribe on YouTube
-              </a>
-              <a
-                href="https://tiktok.com/@kindnessforautism"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-lg bg-black text-white hover:bg-gray-900"
-              >
-                Follow on TikTok
-              </a>
-            </div>
+      <PremiumSection
+        background="gradient"
+        spacing="lg"
+        className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800"
+      >
+        <div className="text-center text-white max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4">Follow Us for More</h2>
+          <p className="text-xl mb-10 opacity-95">
+            Subscribe to our YouTube channel and follow us on TikTok for the latest
+            updates and inspiring content.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://youtube.com/@kindnessforautism"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white text-red-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-xl"
+            >
+              Subscribe on YouTube
+            </a>
+            <a
+              href="https://tiktok.com/@kindnessforautism"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-black text-white rounded-lg font-semibold text-lg hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-xl"
+            >
+              Follow on TikTok
+            </a>
           </div>
-        </Container>
-      </section>
+        </div>
+      </PremiumSection>
     </>
   );
 }

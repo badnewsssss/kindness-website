@@ -4,7 +4,6 @@ import {
   ContactHero,
   ContactForm,
   ContactInfo,
-  SocialLinks,
 } from '@/components/contact';
 
 export const metadata: Metadata = {
@@ -32,11 +31,6 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <ContactInfo />
-
-              <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-                <SocialLinks />
-              </div>
             </div>
           </div>
         </Container>

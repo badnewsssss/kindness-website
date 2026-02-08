@@ -17,7 +17,8 @@ export function CoinOfBlessings() {
         <div className="text-center mb-12 lg:mb-16">
           <h2
             id="coin-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: '#111827' }}
           >
             The Coin of Blessings & Legacy
           </h2>
@@ -57,7 +58,7 @@ export function CoinOfBlessings() {
           {/* Description Content */}
           <div className="order-1 lg:order-2 space-y-6">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#111827' }}>
                 A Journey of Inspiration
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -69,7 +70,7 @@ export function CoinOfBlessings() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#111827' }}>
                 Symbol of Unity
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -82,7 +83,7 @@ export function CoinOfBlessings() {
 
             {/* Key Values */}
             <div className="pt-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#111827' }}>
                 What the Coin Represents
               </h4>
               <ul className="space-y-3" role="list">
@@ -121,7 +122,7 @@ export function CoinOfBlessings() {
 
             {/* Notable Encounters */}
             <div className="pt-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <h4 className="text-lg font-semibold mb-3" style={{ color: '#111827' }}>
                 Notable Encounters
               </h4>
               <p className="text-gray-700 leading-relaxed">

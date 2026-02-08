@@ -1,0 +1,12 @@
+# Screenshots and temp files
+*.png
+*.jpg
+*.jpeg
+nul
+
+# IDE
+.vscode/
+.playwright-mcp/
+
+# Session directories
+kindness-*/

@@ -32,14 +32,6 @@ export default function DonatePage() {
       {/* Donation Options */}
       <section className="section bg-[var(--color-muted)]">
         <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Choose Your Impact</h2>
-            <p className="text-[var(--color-muted-foreground)] max-w-2xl mx-auto">
-              Every donation, no matter the size, helps us spread kindness and support the
-              autism community. Choose an amount that works for you.
-            </p>
-          </div>
-
           <DonationTiers />
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
@@ -52,14 +44,6 @@ export default function DonatePage() {
       {/* Fund Allocation */}
       <section className="section">
         <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How Your Donation Helps</h2>
-            <p className="text-[var(--color-muted-foreground)] max-w-2xl mx-auto">
-              We&apos;re committed to transparency. Here&apos;s how your generous
-              contributions are put to work.
-            </p>
-          </div>
-
           <FundAllocation />
         </Container>
       </section>

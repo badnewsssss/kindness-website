@@ -107,7 +107,8 @@ export function FeaturedStories() {
         <div className="text-center mb-12 lg:mb-16">
           <h2
             id="stories-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: '#111827' }}
           >
             Stories of Kindness
           </h2>
@@ -143,7 +144,7 @@ export function FeaturedStories() {
             </Button>
           </Link>
           <p className="mt-4 text-sm text-gray-600">
-            Explore all 44,000+ stories of kindness from our community
+            Explore all 52,384+ stories of kindness from our community
           </p>
         </div>
       </div>

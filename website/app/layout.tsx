@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Nunito, Open_Sans } from "next/font/google";
+import { Inter, Playfair_Display, Nunito } from "next/font/google";
 import { Header, Footer, SkipLink } from "@/components/layout";
 import "./globals.css";
 
@@ -9,13 +9,14 @@ const inter = Inter({
   display: "swap",
 });
 
-const nunito = Nunito({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const openSans = Open_Sans({
+const nunito = Nunito({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -64,14 +65,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${nunito.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${nunito.variable}`}>
       <body className="antialiased">
-        <SkipLink />
-        <Header />
-        <main id="main-content" className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+          <SkipLink />
+          <Header />
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
       </body>
     </html>
   );

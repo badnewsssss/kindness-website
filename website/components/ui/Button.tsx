@@ -35,11 +35,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none rounded-lg';
 
     const variants = {
-      primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 active:bg-blue-800',
-      secondary: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500 active:bg-green-800',
-      outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500 active:bg-blue-100',
-      ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 active:bg-gray-200',
-      autism: 'bg-[#0066CC] text-white hover:bg-[#0052A3] focus:ring-[#0066CC] active:bg-[#004080]', // Autism awareness blue
+      primary: 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 focus:ring-blue-500 active:from-blue-800 active:to-blue-900 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-100',
+      secondary: 'bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 focus:ring-green-500 active:from-green-800 active:to-green-900 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-100',
+      outline: 'border-2 border-blue-600 text-blue-600 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 focus:ring-blue-500 active:bg-blue-100 transition-all duration-300 hover:scale-105 active:scale-100',
+      ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 active:bg-gray-200 transition-all duration-200',
+      autism: 'bg-gradient-to-r from-[#0057a8] to-[#0066CC] text-white hover:from-[#004080] hover:to-[#0052A3] focus:ring-[#0066CC] active:from-[#003366] active:to-[#004080] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-100', // Autism awareness blue
     };
 
     const sizes = {

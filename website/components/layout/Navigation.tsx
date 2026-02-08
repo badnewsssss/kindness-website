@@ -17,7 +17,7 @@ export const navigationItems: NavItem[] = [
   { name: 'Gallery', href: '/gallery', description: 'View photo gallery' },
   { name: 'Videos', href: '/videos', description: 'Watch our videos' },
   { name: 'Stories', href: '/stories', description: 'Read inspiring stories' },
-  { name: 'Committee', href: '/committee', description: 'Meet our team' },
+  { name: 'Committee', href: '/advisory-committee', description: 'Meet our team' },
   { name: 'Contact', href: '/contact', description: 'Get in touch' },
 ];
 

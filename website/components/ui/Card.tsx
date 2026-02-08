@@ -40,8 +40,8 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     },
     ref
   ) => {
-    const baseStyles = 'bg-white rounded-lg shadow-md transition-all duration-200';
-    const hoverStyles = hover ? 'hover:shadow-lg hover:-translate-y-0.5' : '';
+    const baseStyles = 'bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300';
+    const hoverStyles = hover ? 'hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:border-blue-200' : '';
 
     const paddingStyles = {
       none: '',

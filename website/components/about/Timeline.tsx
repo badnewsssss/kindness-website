@@ -44,8 +44,8 @@ const events: TimelineEvent[] = [
   {
     id: 'stories-milestone',
     year: '2018',
-    title: '44,000 Stories Milestone',
-    description: 'The collection reaches 44,000+ personal stories from families, caregivers, and individuals touched by autism. Each story becomes a testament to the power of compassion and recognition.',
+    title: '52,384 Stories Milestone',
+    description: 'The collection reaches 52,384+ personal stories from families, caregivers, and individuals touched by autism. Each story becomes a testament to the power of compassion and recognition.',
     icon: BookOpen,
     color: 'text-amber-600',
     bgColor: 'bg-amber-100',

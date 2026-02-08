@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Container } from '@/components/layout';
 import { StoryGrid, StorySearch, Pagination } from '@/components/stories';
+import { PremiumHero, PremiumSection } from '@/components/shared';
 import { stories } from '@/data/stories';
 import type { SortOption } from '@/components/stories/StorySearch';
 
@@ -75,49 +76,41 @@ export default function StoriesPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--color-secondary-light)]/10 via-white to-[var(--color-primary-light)]/10 py-16 lg:py-24">
-        <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Stories of <span className="text-gradient">Kindness</span>
-            </h1>
-            <p className="text-lg text-[var(--color-muted-foreground)] mb-2">
-              Over <strong>44,000</strong> stories of hope, resilience, and compassion
-            </p>
-            <p className="text-[var(--color-muted-foreground)]">
-              Each story is a testament to the power of kindness. Read how acts of
-              compassion have transformed lives and communities.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PremiumHero
+        title="Stories of Kindness"
+        subtitle="Community Impact"
+        description={
+          <>
+            Over <strong className="text-blue-600">52,384</strong> stories of hope, resilience, and compassion.
+            Each story is a testament to the power of kindness. Read how acts of
+            compassion have transformed lives and communities.
+          </>
+        }
+        background="gradient"
+      />
 
       {/* Search and Filter */}
-      <section className="py-8 border-b border-[var(--color-border)]">
-        <Container>
-          <StorySearch
-            onSearchChange={(query) => {
-              setSearchQuery(query);
-              handleFilterChange();
-            }}
-            onCategoryChange={(category) => {
-              setSelectedCategory(category);
-              handleFilterChange();
-            }}
-            onSortChange={(sort) => {
-              setSortBy(sort);
-              handleFilterChange();
-            }}
-            onClearFilters={handleClearFilters}
-            resultsCount={filteredStories.length}
-          />
-        </Container>
-      </section>
+      <PremiumSection background="white" spacing="sm" className="border-b border-gray-200">
+        <StorySearch
+          onSearchChange={(query) => {
+            setSearchQuery(query);
+            handleFilterChange();
+          }}
+          onCategoryChange={(category) => {
+            setSelectedCategory(category);
+            handleFilterChange();
+          }}
+          onSortChange={(sort) => {
+            setSortBy(sort);
+            handleFilterChange();
+          }}
+          onClearFilters={handleClearFilters}
+          resultsCount={filteredStories.length}
+        />
+      </PremiumSection>
 
       {/* Stories Grid */}
-      <section className="section">
-        <Container>
+      <PremiumSection background="white" spacing="lg">
           <StoryGrid stories={paginatedStories} />
 
           {filteredStories.length === 0 && (
@@ -140,24 +133,24 @@ export default function StoriesPage() {
               itemsPerPage={STORIES_PER_PAGE}
             />
           )}
-        </Container>
-      </section>
+      </PremiumSection>
 
       {/* Submit Story CTA */}
-      <section className="section bg-[var(--color-muted)]">
-        <Container>
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Share Your Story</h2>
-            <p className="text-[var(--color-muted-foreground)] mb-6">
-              Have a story of kindness to share? We&apos;d love to hear from you. Your
-              experience could inspire others and become part of our growing collection.
-            </p>
-            <a href="/contact?subject=story" className="btn btn-primary btn-lg">
-              Submit Your Story
-            </a>
-          </div>
-        </Container>
-      </section>
+      <PremiumSection background="muted" spacing="lg">
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4">Share Your Story</h2>
+          <p className="text-gray-600 text-lg mb-8">
+            Have a story of kindness to share? We&apos;d love to hear from you. Your
+            experience could inspire others and become part of our growing collection.
+          </p>
+          <a
+            href="/contact?subject=story"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            Submit Your Story
+          </a>
+        </div>
+      </PremiumSection>
     </>
   );
 }

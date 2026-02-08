@@ -33,7 +33,7 @@ const quickLinks: QuickLink[] = [
   { name: 'Gallery', href: '/gallery' },
   { name: 'Videos', href: '/videos' },
   { name: 'Stories', href: '/stories' },
-  { name: 'Committee', href: '/committee' },
+  { name: 'Committee', href: '/advisory-committee' },
   { name: 'Contact', href: '/contact' },
   { name: 'Donate', href: '/donate' },
 ];
@@ -66,7 +66,7 @@ export const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-blue-50 to-white border-t border-gray-200">
+    <footer className="bg-gradient-to-br from-gray-50 via-blue-50/50 to-white border-t border-gray-200">
       <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Mission & Logo */}

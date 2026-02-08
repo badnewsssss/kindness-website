@@ -92,7 +92,7 @@ export function AboutHero() {
               <div className="text-sm text-gray-600">Years of Resilience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-600 mb-2">44,000+</div>
+              <div className="text-4xl font-bold text-indigo-600 mb-2">52,384+</div>
               <div className="text-sm text-gray-600">Stories Collected</div>
             </div>
             <div className="text-center">

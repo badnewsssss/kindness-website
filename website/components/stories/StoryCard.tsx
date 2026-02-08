@@ -124,13 +124,17 @@ export const StoryCard = forwardRef<HTMLDivElement, StoryCardProps>(
             </div>
 
             {/* Title */}
-            <h3 className={cn(
-              'font-bold text-gray-900 mb-2 leading-tight',
-              isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
-            )}>
+            <h3
+              className={cn(
+                'font-bold mb-2 leading-tight',
+                isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
+              )}
+              style={{ color: '#111827' }}
+            >
               <Link
                 href={storyUrl}
                 className="hover:text-blue-600 transition-colors focus:outline-none focus:underline focus:decoration-2 focus:decoration-blue-500"
+                style={{ color: '#111827' }}
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 {title}

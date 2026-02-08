@@ -14,7 +14,7 @@ export const Header: FC = () => {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-md">
       <Container className="py-4">
         <div className="flex items-center justify-between">
           {/* Logo / Site Name */}
