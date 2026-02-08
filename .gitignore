@@ -1,7 +1,7 @@
-# Screenshots and temp files
-*.png
-*.jpg
-*.jpeg
+# Screenshots and temp files at root
+/*.png
+/*.jpg
+/*.jpeg
 nul
 
 # IDE

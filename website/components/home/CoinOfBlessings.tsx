@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/Card';
 
 /**
@@ -32,25 +33,15 @@ export function CoinOfBlessings() {
           {/* Coin Image/Placeholder */}
           <div className="order-2 lg:order-1">
             <Card padding="none" className="overflow-hidden">
-              <div className="aspect-square bg-gradient-to-br from-amber-100 via-yellow-50 to-orange-100 flex items-center justify-center p-8">
-                <div className="relative w-full h-full max-w-md mx-auto">
-                  {/* Placeholder for coin image - replace with actual image */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-400 via-yellow-400 to-orange-400 shadow-2xl flex items-center justify-center">
-                    <div className="w-3/4 h-3/4 rounded-full border-8 border-white flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-6xl mb-2" aria-hidden="true">🤝</div>
-                        <div className="text-white font-bold text-xl">
-                          Coin of
-                        </div>
-                        <div className="text-white font-bold text-xl">
-                          Blessings
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* Decorative glow effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-300 to-orange-300 blur-3xl opacity-30" aria-hidden="true" />
-                </div>
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/ring-2.jpg"
+                  alt="The Coin of Blessings & Legacy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
               </div>
             </Card>
           </div>
