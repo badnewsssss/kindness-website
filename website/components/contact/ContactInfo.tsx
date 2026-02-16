@@ -15,7 +15,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({ className }) => {
     <div className={cn('space-y-8', className)}>
       {/* Email Section */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+        <h3 className="text-lg font-semibold text-[var(--color-foreground)] flex items-center gap-2">
           <svg
             className="w-5 h-5 text-blue-600"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({ className }) => {
 
       {/* Location Section (Optional) */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+        <h3 className="text-lg font-semibold text-[var(--color-foreground)] flex items-center gap-2">
           <svg
             className="w-5 h-5 text-blue-600"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,14 +71,14 @@ export const ContactInfo: FC<ContactInfoProps> = ({ className }) => {
           </svg>
           Location
         </h3>
-        <p className="text-gray-600">
+        <p className="text-[var(--color-muted-foreground)]">
           Serving the autism community worldwide
         </p>
       </div>
 
       {/* Additional Info */}
-      <div className="pt-6 border-t border-gray-200">
-        <p className="text-sm text-gray-500">
+      <div className="pt-6 border-t border-[var(--color-border)]">
+        <p className="text-sm text-[var(--color-muted-foreground)]">
           We typically respond to inquiries within 24-48 hours during business days.
         </p>
       </div>

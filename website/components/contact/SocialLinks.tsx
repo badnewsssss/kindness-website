@@ -71,7 +71,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
 
   return (
     <div className={cn('flex flex-col gap-4', className)}>
-      <h3 className="text-lg font-semibold text-gray-900">
+      <h3 className="text-lg font-semibold text-[var(--color-foreground)]">
         Follow Us
       </h3>
       <div className="flex gap-3">
@@ -82,7 +82,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              'inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
+              'inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-[var(--color-border)] text-[var(--color-muted-foreground)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
               link.color
             )}
             aria-label={`Visit our ${link.name} page (opens in new window)`}

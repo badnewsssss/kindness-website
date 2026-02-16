@@ -33,9 +33,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const errorId = error ? `${inputId}-error` : undefined;
     const helperId = helperText ? `${inputId}-helper` : undefined;
 
-    const baseStyles = 'block w-full rounded-md border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:bg-gray-100 disabled:cursor-not-allowed disabled:text-gray-500';
+    const baseStyles = 'block w-full rounded-md border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-50 disabled:cursor-not-allowed bg-[var(--color-surface)] text-[var(--color-foreground)]';
 
-    const normalStyles = 'border-gray-300 focus:border-blue-500 focus:ring-blue-500';
+    const normalStyles = 'border-[var(--color-border)] focus:border-blue-500 focus:ring-blue-500';
     const errorStyles = 'border-red-500 focus:border-red-500 focus:ring-red-500';
 
     const sizeStyles = 'px-3 py-2 text-base';
@@ -47,7 +47,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-gray-700"
+            className="text-sm font-medium text-[var(--color-foreground)]"
           >
             {label}
             {required && (
@@ -148,9 +148,9 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     const errorId = error ? `${inputId}-error` : undefined;
     const helperId = helperText ? `${inputId}-helper` : undefined;
 
-    const baseStyles = 'block w-full rounded-md border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:bg-gray-100 disabled:cursor-not-allowed disabled:text-gray-500 resize-y';
+    const baseStyles = 'block w-full rounded-md border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-50 disabled:cursor-not-allowed bg-[var(--color-surface)] text-[var(--color-foreground)] resize-y';
 
-    const normalStyles = 'border-gray-300 focus:border-blue-500 focus:ring-blue-500';
+    const normalStyles = 'border-[var(--color-border)] focus:border-blue-500 focus:ring-blue-500';
     const errorStyles = 'border-red-500 focus:border-red-500 focus:ring-red-500';
 
     const sizeStyles = 'px-3 py-2 text-base';
@@ -162,7 +162,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-gray-700"
+            className="text-sm font-medium text-[var(--color-foreground)]"
           >
             {label}
             {required && (

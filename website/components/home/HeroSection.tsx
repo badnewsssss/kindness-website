@@ -49,11 +49,10 @@ export function HeroSection() {
           {/* Main Headline */}
           <h1
             id="hero-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight animate-fade-in-up"
-            style={{ color: '#111827' }}
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight animate-fade-in-up text-[var(--color-foreground)]"
           >
             Kindness for Autism:{' '}
-            <span style={{ color: '#2563eb' }} className="block sm:inline">
+            <span className="block sm:inline text-[var(--color-primary)]">
               Honoring Lives & Changing the Future
             </span>
           </h1>
