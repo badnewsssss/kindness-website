@@ -1,7 +1,7 @@
 'use client';
 
 import { type FC, useState, useCallback } from 'react';
-import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 import { cn, formatCurrency } from '@/lib/utils';
 import { Heart, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
@@ -232,32 +232,24 @@ export const PayPalDonationForm: FC<PayPalDonationFormProps> = ({
       {/* PayPal Buttons */}
       {isPayPalConfigured && isValidAmount ? (
         <div className="mb-4">
-          <PayPalScriptProvider
-            options={{
-              clientId: paypalClientId,
-              currency: 'USD',
-              intent: 'capture',
-              disableFunding: 'credit,card',
+          <PayPalButtons
+            key={effectiveAmount}
+            style={{
+              layout: 'vertical',
+              color: 'gold',
+              shape: 'rect',
+              label: 'donate',
+              height: 48,
             }}
-          >
-            <PayPalButtons
-              style={{
-                layout: 'vertical',
-                color: 'gold',
-                shape: 'rect',
-                label: 'donate',
-                height: 48,
-              }}
-              createOrder={createOrder}
-              onApprove={onApprove}
-              onError={onError}
-              onCancel={() => {
-                setStatus('idle');
-                setMessage('');
-              }}
-              disabled={!isValidAmount || status === 'processing'}
-            />
-          </PayPalScriptProvider>
+            createOrder={createOrder}
+            onApprove={onApprove}
+            onError={onError}
+            onCancel={() => {
+              setStatus('idle');
+              setMessage('');
+            }}
+            disabled={!isValidAmount || status === 'processing'}
+          />
         </div>
       ) : !isPayPalConfigured ? (
         <div className="mb-4 rounded-xl border-2 border-dashed border-amber-300 bg-amber-50 p-6 text-center">
