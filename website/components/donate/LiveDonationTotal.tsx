@@ -10,8 +10,13 @@ export interface LiveDonationTotalProps {
 
 interface DonationTotals {
   totalRaised: number;
+  paypalTotal: number;
+  gofundmeTotal: number;
   donationCount: number;
+  paypalDonorCount: number;
+  gofundmeDonorCount: number;
   goal: number;
+  gofundmeLastUpdated: string | null;
 }
 
 /**
@@ -150,6 +155,26 @@ export const LiveDonationTotal: FC<LiveDonationTotalProps> = ({
           <span>{formatCurrency(totals.goal, { maximumFractionDigits: 0 })}</span>
         </div>
       </div>
+
+      {/* Source breakdown */}
+      {(totals.paypalTotal > 0 || totals.gofundmeTotal > 0) && (
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-600">
+          {totals.paypalTotal > 0 && (
+            <span className="flex items-center gap-1">
+              <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
+              PayPal: {formatCurrency(totals.paypalTotal, { maximumFractionDigits: 0 })}
+              {' '}({totals.paypalDonorCount} {totals.paypalDonorCount === 1 ? 'donor' : 'donors'})
+            </span>
+          )}
+          {totals.gofundmeTotal > 0 && (
+            <span className="flex items-center gap-1">
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
+              GoFundMe: {formatCurrency(totals.gofundmeTotal, { maximumFractionDigits: 0 })}
+              {' '}({totals.gofundmeDonorCount} {totals.gofundmeDonorCount === 1 ? 'donor' : 'donors'})
+            </span>
+          )}
+        </div>
+      )}
 
       <div className="mt-3 text-center">
         <p className="text-sm text-[var(--color-muted-foreground)]">

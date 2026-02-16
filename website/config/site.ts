@@ -1,5 +1,5 @@
 /**
- * Site Configuration for Kindness for Autism
+ * Site Configuration for The McKindness Foundation - Kindness for Autism
  *
  * This file contains all the core configuration for the website including
  * metadata, navigation, social links, and organization information.
@@ -9,10 +9,10 @@ export const siteConfig = {
   /**
    * Basic site information
    */
-  name: 'Kindness for Autism',
-  tagline: 'Spreading Kindness, One Act at a Time',
+  name: 'The McKindness Foundation',
+  tagline: 'Kindness for Autism',
   description:
-    'Join Charlie Miller and the Kindness for Autism community in spreading awareness, acceptance, and compassion for individuals with autism and their families. Together, we can make a difference through acts of kindness.',
+    'The McKindness Foundation has been dedicated to autism awareness, advocacy, and spreading real measurable kindness that supports families navigating autism spectrum challenges for over 25 years. Over 52,000 documented kindness stories collected worldwide.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://kindnessforautism.org',
 
   /**
@@ -21,17 +21,17 @@ export const siteConfig = {
   founder: {
     name: 'Charlie Miller',
     role: 'Founder & Advocate',
-    bio: 'Charlie Miller is a passionate advocate for autism awareness and acceptance. Through Kindness for Autism, Charlie works to create a more inclusive and understanding world for individuals on the autism spectrum.',
+    bio: 'Charlie Miller founded The McKindness Foundation inspired by his son\'s life journey — born at just 1 pound 8 ounces, facing odds that felt impossible, and now celebrating 25 years of life, strength, and resilience. That journey became proof that challenges do not define potential.',
   },
 
   /**
    * Mission and Values
    */
   mission:
-    'Our mission is to promote autism awareness, foster acceptance, and create meaningful change through acts of kindness. We believe that every person deserves understanding, respect, and support.',
+    'Dedicated to autism awareness, autism advocacy, and spreading real measurable kindness that supports families navigating autism spectrum challenges every single day. No family should have to figure all of this out alone.',
 
   vision:
-    'A world where individuals with autism are fully accepted, supported, and celebrated for their unique strengths and perspectives.',
+    'If kindness opens every door, then together we can open doors to understanding, support, and opportunity for every person living with autism.',
 
   values: [
     {
@@ -156,7 +156,7 @@ export const siteConfig = {
    */
   organization: {
     type: 'NonProfit',
-    founded: 2024, // Update with actual founding year
+    founded: 2000, // 25+ years of service
     ein: '12-3456789', // Update with actual EIN (Tax ID)
     registeredCharity: true,
   },

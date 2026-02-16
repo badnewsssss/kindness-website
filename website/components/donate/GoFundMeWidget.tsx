@@ -14,7 +14,7 @@ export interface GoFundMeWidgetProps {
  * In production, this would embed the actual GoFundMe widget or link to campaign
  */
 export const GoFundMeWidget: FC<GoFundMeWidgetProps> = ({
-  campaignUrl = 'https://gofundme.com/kindness-for-autism',
+  campaignUrl = 'https://gofund.me/5151ab63e',
   className,
   variant = 'button',
 }) => {
@@ -39,10 +39,10 @@ export const GoFundMeWidget: FC<GoFundMeWidgetProps> = ({
 
           {/* Content */}
           <div className="flex-1 text-center md:text-left">
-            <h3 className="mb-1 text-lg font-bold text-gray-900 md:text-xl">
+            <h3 className="mb-1 text-lg font-bold text-[var(--color-foreground)] md:text-xl">
               Support Us on GoFundMe
             </h3>
-            <p className="text-sm text-gray-600 md:text-base">
+            <p className="text-sm text-[var(--color-muted-foreground)] md:text-base">
               Join our community of supporters making a difference for autism awareness
             </p>
           </div>

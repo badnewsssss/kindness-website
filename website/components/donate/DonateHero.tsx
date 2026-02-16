@@ -33,20 +33,20 @@ export const DonateHero: FC<DonateHeroProps> = ({ className }) => {
             id="donate-hero-title"
             className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl text-balance"
           >
-            Your Kindness Changes Lives
+            Your Kindness Opens Every Door
           </h1>
 
           {/* Subheadline */}
           <p className="mb-8 text-xl text-white/90 md:text-2xl lg:text-3xl text-balance">
-            Support autism awareness, advocacy, and empowerment in our community
+            No family should have to figure all of this out alone
           </p>
 
           {/* Mission Statement */}
           <div className="mx-auto max-w-2xl">
             <p className="text-lg text-white/80 md:text-xl leading-relaxed">
-              Every contribution helps us create a more inclusive world where individuals
-              with autism can thrive. Your donation supports vital programs, resources,
-              and advocacy efforts that make a real difference.
+              Your support helps expand autism support programs, advocacy efforts,
+              family education resources, and kindness-based outreach that creates
+              real community-level change.
             </p>
           </div>
 

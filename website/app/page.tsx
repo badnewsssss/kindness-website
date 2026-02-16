@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: 'Home',
   description:
-    'Kindness for Autism: Honoring Lives & Changing the Future. Join Charlie Miller in spreading kindness and awareness for the autism community.',
+    'The McKindness Foundation: Kindness for Autism. Over 25 years of autism advocacy and 52,000+ documented kindness stories. Founded by Charlie Miller.',
 };
 
 export default function HomePage() {

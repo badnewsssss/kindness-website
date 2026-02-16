@@ -24,6 +24,9 @@ export interface DonationData {
   donationCount: number;
   goal: number;
   donations: DonationRecord[];
+  gofundmeOffset: number;
+  gofundmeDonorCount: number;
+  gofundmeLastUpdated: string | null;
 }
 
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -34,6 +37,9 @@ const DEFAULT_DATA: DonationData = {
   donationCount: 0,
   goal: 250000,
   donations: [],
+  gofundmeOffset: 0,
+  gofundmeDonorCount: 0,
+  gofundmeLastUpdated: null,
 };
 
 async function ensureDataFile(): Promise<void> {
@@ -72,15 +78,35 @@ export async function recordDonation(donation: Omit<DonationRecord, 'id' | 'time
   return record;
 }
 
+export async function updateGoFundMeOffset(amount: number, donorCount: number): Promise<void> {
+  const data = await getDonationData();
+  data.gofundmeOffset = amount;
+  data.gofundmeDonorCount = donorCount;
+  data.gofundmeLastUpdated = new Date().toISOString();
+  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+}
+
 export async function getDonationTotals(): Promise<{
   totalRaised: number;
+  paypalTotal: number;
+  gofundmeTotal: number;
   donationCount: number;
+  paypalDonorCount: number;
+  gofundmeDonorCount: number;
   goal: number;
+  gofundmeLastUpdated: string | null;
 }> {
   const data = await getDonationData();
+  const paypalTotal = data.totalRaised;
+  const gofundmeTotal = data.gofundmeOffset || 0;
   return {
-    totalRaised: data.totalRaised,
-    donationCount: data.donationCount,
+    totalRaised: paypalTotal + gofundmeTotal,
+    paypalTotal,
+    gofundmeTotal,
+    donationCount: data.donationCount + (data.gofundmeDonorCount || 0),
+    paypalDonorCount: data.donationCount,
+    gofundmeDonorCount: data.gofundmeDonorCount || 0,
     goal: data.goal,
+    gofundmeLastUpdated: data.gofundmeLastUpdated || null,
   };
 }

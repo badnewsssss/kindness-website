@@ -160,7 +160,7 @@ export const PayPalDonationForm: FC<PayPalDonationFormProps> = ({
               'focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-offset-2',
               !isCustom && amount === value
                 ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-white shadow-md'
-                : 'border-[var(--color-border)] bg-white text-gray-900 hover:border-[var(--color-primary)]'
+                : 'border-[var(--color-border)] bg-white text-[var(--color-foreground)] hover:border-[var(--color-primary)]'
             )}
             aria-pressed={!isCustom && amount === value}
           >
@@ -182,7 +182,7 @@ export const PayPalDonationForm: FC<PayPalDonationFormProps> = ({
               value={customAmount}
               onChange={(e) => handleCustomChange(e.target.value)}
               placeholder="Enter amount"
-              className="w-full rounded-xl border-2 border-[var(--color-primary)] bg-white py-4 pl-10 pr-4 text-2xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              className="w-full rounded-xl border-2 border-[var(--color-primary)] bg-white py-4 pl-10 pr-4 text-2xl font-bold text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               aria-label="Enter custom donation amount in dollars"
               autoFocus
             />

@@ -30,7 +30,7 @@ export function AboutHero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full mb-6 shadow-sm">
             <Heart className="text-rose-500" size={20} aria-hidden="true" />
             <span className="text-sm font-semibold text-gray-700">
-              A Father&apos;s Journey of Love
+              The McKindness Foundation
             </span>
           </div>
 
@@ -39,24 +39,24 @@ export function AboutHero() {
             id="about-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            Join Me in a Mission of{' '}
+            Built for the Moment{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-              Hope and Recognition
+              Families Need Us Most
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl sm:text-2xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-            My name is Charlie Miller. Twenty-five years ago, my son was born weighing just
-            1 pound, 8 ounces. His journey has taught me everything about resilience, the
-            power of kindness, and the extraordinary people who make miracles possible.
+            There is a moment many autism families know. The moment you realize the world
+            is not built for your child. The moment you realize you will have to become an
+            advocate, a protector, a researcher, and sometimes a warrior.
           </p>
 
           {/* Supporting text */}
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            This year, as we celebrate his 25th birthday, I invite you to be part of a
-            movement that honors the teachers, doctors, caregivers, and everyday heroes
-            who transform lives through compassion and dedication.
+            The McKindness Foundation was built for that moment. For over 25 years, we have been
+            dedicated to autism awareness, autism advocacy, and spreading real measurable kindness
+            that supports families navigating autism spectrum challenges every single day.
           </p>
 
           {/* CTA Buttons */}
@@ -88,12 +88,12 @@ export function AboutHero() {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">25</div>
-              <div className="text-sm text-gray-600">Years of Resilience</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">25+</div>
+              <div className="text-sm text-gray-600">Years Serving the Autism Community</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-600 mb-2">52,384+</div>
-              <div className="text-sm text-gray-600">Stories Collected</div>
+              <div className="text-4xl font-bold text-indigo-600 mb-2">52,000+</div>
+              <div className="text-sm text-gray-600">Documented Kindness Stories</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-600 mb-2">8</div>

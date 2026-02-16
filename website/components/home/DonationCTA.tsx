@@ -21,21 +21,21 @@ export function DonationCTA() {
                 id="donation-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
               >
-                Join Our Mission of{' '}
+                Why Even Small Donations{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600">
-                  Kindness
+                  Matter
                 </span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
-                Your contribution helps us build a future where every person with autism
-                is met with understanding, support, and kindness.
+                Because one resource can change a family&apos;s entire path. Because understanding
+                can prevent isolation. Because kindness can lower fear faster than anything else on earth.
               </p>
             </div>
 
             {/* Fund Usage Information */}
             <div className="mb-10">
               <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-                How Your Donation Makes a Difference
+                How Your Donation Creates Real Impact
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center p-4">
@@ -56,10 +56,10 @@ export function DonationCTA() {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    Professional Accounting
+                    Family Support & Education
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Ensuring transparency and proper fund management for maximum impact
+                    Family support resources and autism education so no family has to figure it out alone
                   </p>
                 </div>
 
@@ -81,10 +81,10 @@ export function DonationCTA() {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    Motivational Speakers
+                    Autism Advocacy & Awareness
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Bringing inspiring voices to share hope and empower families
+                    Community autism awareness initiatives and kindness storytelling that reduces stigma
                   </p>
                 </div>
 
@@ -106,10 +106,10 @@ export function DonationCTA() {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    Legal Advocacy
+                    Rights & Transparency
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Supporting legal efforts to protect rights and advance autism advocacy
+                    Autism rights protection and responsible financial stewardship through professional accounting
                   </p>
                 </div>
               </div>

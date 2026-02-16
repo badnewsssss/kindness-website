@@ -20,11 +20,12 @@ export function CharlieStory() {
             id="charlie-story-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
-            A Journey That Changed Everything
+            A Journey That Became a Mission
           </h2>
           <p className="text-lg sm:text-xl text-gray-600">
-            Every parent dreams of holding their newborn. Our reality began with hope,
-            fear, and the most incredible community of caregivers who became our family.
+            This mission was founded by Charlie Miller, inspired by his son&apos;s life journey.
+            Born at just 1 pound 8 ounces, facing odds that felt impossible, and now
+            celebrating 25 years of life, strength, and resilience.
           </p>
         </div>
 
@@ -39,14 +40,15 @@ export function CharlieStory() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Twenty-five years ago, my son entered this world at just 1 pound, 8 ounces.
-                The neonatal intensive care unit became our second home. Every beep of the
-                monitors, every breath he took, reminded us of how fragile and precious life is.
+                The neonatal intensive care unit became our second home. The odds felt
+                impossible. But that journey became proof that challenges do not define
+                potential. Support, advocacy, and kindness help unlock it.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                But in that NICU, surrounded by uncertainty, we discovered something
+                In that NICU, surrounded by uncertainty, we discovered something
                 extraordinary: the power of human kindness. Nurses who stayed past their
-                shifts, doctors who became advocates, specialists who saw not a case number
-                but a child with infinite potential.
+                shifts, doctors who became advocates, and a community of people who simply
+                cared enough to slow down and see us.
               </p>
             </div>
 
@@ -56,15 +58,16 @@ export function CharlieStory() {
                 Living with Autism
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                As my son grew, we learned he experiences the world differently. His autism
-                diagnosis wasn&apos;t an ending—it was an invitation to see beauty in new ways,
-                to celebrate different forms of communication, and to champion a world that
-                embraces neurodiversity.
+                Autism affects millions of individuals and families. Many face barriers
+                including lack of education and awareness, limited access to support resources,
+                social isolation, difficulty navigating advocacy systems, and financial and
+                emotional strain. No family should have to figure all of this out alone.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                The journey has been filled with challenges, yes. But it has been equally
-                filled with triumph, joy, and countless moments of connection that most
-                people might overlook but we treasure deeply.
+                That is why this foundation exists. We have collected more than 52,000 real
+                stories of kindness — real people stepping in during real moments when someone
+                needed help, understanding, patience, or simply someone who cared enough to
+                slow down and see them.
               </p>
             </div>
           </div>
@@ -79,13 +82,12 @@ export function CharlieStory() {
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2">
-                      The Unsung Heroes
+                      Autism Advocacy & Rights
                     </h4>
                     <p className="text-gray-700 leading-relaxed">
-                      Special-needs teachers who saw potential where others saw limitations.
-                      Therapists who celebrated every small victory. Medical professionals
-                      who treated us with dignity and hope. These are the people who deserve
-                      recognition.
+                      Expanding autism advocacy efforts and rights protection so every family
+                      has access to the support they need. From education resources to community
+                      programs, we help families navigate the systems that matter most.
                     </p>
                   </div>
                 </div>
@@ -100,13 +102,13 @@ export function CharlieStory() {
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2">
-                      A Father&apos;s Promise
+                      Kindness-Based Outreach
                     </h4>
                     <p className="text-gray-700 leading-relaxed">
-                      I made a promise to honor everyone who has touched our lives with
-                      kindness. That promise has grown into this mission—to collect stories,
-                      to recognize heroes, and to build a future where compassion is
-                      celebrated and rewarded.
+                      Kindness storytelling projects that reduce stigma and increase
+                      understanding. Because families remember who showed up for them when
+                      life felt overwhelming. If kindness opens every door, together we can
+                      open doors to opportunity for every person living with autism.
                     </p>
                   </div>
                 </div>
@@ -135,9 +137,10 @@ export function CharlieStory() {
         {/* Closing Statement */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
           <blockquote className="text-xl sm:text-2xl italic text-gray-800 border-l-4 border-amber-500 pl-6 py-4">
-            &ldquo;Our journey has taught me that kindness isn&apos;t just a virtue—it&apos;s
-            a force that can change lives, build communities, and create a better world for
-            everyone, especially those who need it most.&rdquo;
+            &ldquo;If kindness opens every door, then together we can open doors to
+            understanding, support, and opportunity for every person living with autism.
+            This is a movement built on compassion, action, and refusing to let families
+            face autism alone.&rdquo;
           </blockquote>
           <p className="mt-4 text-lg font-semibold text-gray-900">
             — Charlie Miller
