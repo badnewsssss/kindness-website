@@ -1,12 +1,12 @@
 /**
  * Donation tracking store
  *
- * Uses a JSON file for persistent storage of donation records and totals.
- * In production, replace with a proper database (PostgreSQL, Supabase, etc.)
+ * Uses in-memory storage for serverless (Vercel) compatibility.
+ * PayPal capture succeeds even if recording fails — the payment
+ * itself is handled by PayPal, this is just for display tracking.
+ *
+ * For persistent tracking, replace with a database (Supabase, etc.)
  */
-
-import { promises as fs } from 'fs';
-import path from 'path';
 
 export interface DonationRecord {
   id: string;
@@ -29,10 +29,8 @@ export interface DonationData {
   gofundmeLastUpdated: string | null;
 }
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DATA_FILE = path.join(DATA_DIR, 'donations.json');
-
-const DEFAULT_DATA: DonationData = {
+// In-memory store (resets on cold start, but payments are safe in PayPal)
+let donationData: DonationData = {
   totalRaised: 0,
   donationCount: 0,
   goal: 250000,
@@ -42,48 +40,28 @@ const DEFAULT_DATA: DonationData = {
   gofundmeLastUpdated: null,
 };
 
-async function ensureDataFile(): Promise<void> {
-  try {
-    await fs.access(DATA_DIR);
-  } catch {
-    await fs.mkdir(DATA_DIR, { recursive: true });
-  }
-  try {
-    await fs.access(DATA_FILE);
-  } catch {
-    await fs.writeFile(DATA_FILE, JSON.stringify(DEFAULT_DATA, null, 2));
-  }
-}
-
 export async function getDonationData(): Promise<DonationData> {
-  await ensureDataFile();
-  const raw = await fs.readFile(DATA_FILE, 'utf-8');
-  return JSON.parse(raw) as DonationData;
+  return donationData;
 }
 
 export async function recordDonation(donation: Omit<DonationRecord, 'id' | 'timestamp'>): Promise<DonationRecord> {
-  const data = await getDonationData();
-
   const record: DonationRecord = {
     ...donation,
     id: `don_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
     timestamp: new Date().toISOString(),
   };
 
-  data.donations.push(record);
-  data.totalRaised += donation.amount;
-  data.donationCount += 1;
+  donationData.donations.push(record);
+  donationData.totalRaised += donation.amount;
+  donationData.donationCount += 1;
 
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
   return record;
 }
 
 export async function updateGoFundMeOffset(amount: number, donorCount: number): Promise<void> {
-  const data = await getDonationData();
-  data.gofundmeOffset = amount;
-  data.gofundmeDonorCount = donorCount;
-  data.gofundmeLastUpdated = new Date().toISOString();
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+  donationData.gofundmeOffset = amount;
+  donationData.gofundmeDonorCount = donorCount;
+  donationData.gofundmeLastUpdated = new Date().toISOString();
 }
 
 export async function getDonationTotals(): Promise<{
@@ -96,7 +74,7 @@ export async function getDonationTotals(): Promise<{
   goal: number;
   gofundmeLastUpdated: string | null;
 }> {
-  const data = await getDonationData();
+  const data = donationData;
   const paypalTotal = data.totalRaised;
   const gofundmeTotal = data.gofundmeOffset || 0;
   return {
