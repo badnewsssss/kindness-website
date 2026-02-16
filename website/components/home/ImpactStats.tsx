@@ -15,17 +15,18 @@ interface StatItem {
 
 const stats: StatItem[] = [
   {
-    value: '52384',
+    value: '52000',
     suffix: '+',
-    label: 'Stories Collected',
-    description: 'Personal stories of kindness gathered over the years',
+    label: 'Kindness Stories',
+    description: 'Real stories of kindness documented worldwide from people who showed up when it mattered',
     icon: <BookOpen className="w-8 h-8" />,
     color: 'from-[var(--color-primary)] to-[var(--color-autism-blue)]',
   },
   {
     value: '25',
-    label: 'Years of Journey',
-    description: 'Celebrating a remarkable life and mission',
+    suffix: '+',
+    label: 'Years of Advocacy',
+    description: 'Dedicated to autism awareness, advocacy, and spreading measurable kindness',
     icon: <Heart className="w-8 h-8" />,
     color: 'from-[var(--color-error)] to-rose-600',
   },
@@ -33,14 +34,14 @@ const stats: StatItem[] = [
     value: '250000',
     prefix: '$',
     label: 'Fundraising Goal',
-    description: 'Supporting advocacy, legal work, and awareness',
+    description: 'Expanding autism support programs, family education, and community outreach',
     icon: <Target className="w-8 h-8" />,
     color: 'from-[var(--color-secondary)] to-emerald-600',
   },
   {
     value: '8',
     label: 'Committee Members',
-    description: 'Professional advisors guiding our mission',
+    description: 'Professional advisors guiding responsible stewardship and transparency',
     icon: <Users className="w-8 h-8" />,
     color: 'from-[var(--color-autism-gold)] to-amber-600',
   },
@@ -138,7 +139,7 @@ function StatCard({ value, suffix = '', prefix = '', label, description, icon, c
       </div>
 
       {/* Label */}
-      <h3 className="text-lg lg:text-xl font-semibold mb-2 text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors">
+      <h3 className="text-lg lg:text-xl font-semibold mb-2 group-hover:text-blue-500 transition-colors" style={{ color: '#111827' }}>
         {label}
       </h3>
 
@@ -172,9 +173,10 @@ export function ImpactStats() {
           </span>
           <h2
             id="impact-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up text-[var(--color-foreground)]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up"
+            style={{ color: '#111827' }}
           >
-            Our <span className="text-[var(--color-primary)]">Impact</span>
+            Our <span style={{ color: '#2563eb' }}>Impact</span>
           </h2>
           <p className="text-lg sm:text-xl text-[var(--color-muted-foreground)] max-w-2xl mx-auto animate-fade-in-up animation-delay-100">
             Real numbers representing real stories and real change in the autism community

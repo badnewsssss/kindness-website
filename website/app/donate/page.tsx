@@ -10,7 +10,7 @@ import { DonatePageClient } from './DonatePageClient';
 export const metadata: Metadata = {
   title: 'Donate',
   description:
-    'Support the Kindness for Autism mission. Your donation helps us reach our $250,000 goal for accounting, motivational speakers, and legal support.',
+    'Support the McKindness Foundation. Your donation expands autism support programs, advocacy efforts, family education, and kindness-based outreach.',
 };
 
 export default function DonatePage() {
@@ -51,8 +51,9 @@ export default function DonatePage() {
           <div className="text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Your Trust Matters</h2>
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              We believe in complete transparency. Every dollar you donate goes directly
-              toward our mission of spreading kindness and supporting the autism community.
+              Responsible financial stewardship through professional accounting and
+              transparency. Every dollar goes toward autism advocacy, family support, and
+              kindness-based outreach.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <div className="text-center">
@@ -60,12 +61,12 @@ export default function DonatePage() {
                 <div className="text-sm opacity-80">Mission-Focused</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold">44K+</div>
-                <div className="text-sm opacity-80">Stories Shared</div>
+                <div className="text-4xl font-bold">52K+</div>
+                <div className="text-sm opacity-80">Kindness Stories</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold">25</div>
-                <div className="text-sm opacity-80">Years of Journey</div>
+                <div className="text-4xl font-bold">25+</div>
+                <div className="text-sm opacity-80">Years of Advocacy</div>
               </div>
             </div>
           </div>
@@ -78,26 +79,26 @@ export default function DonatePage() {
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Other Ways to Support</h2>
             <p className="text-[var(--color-muted-foreground)] mb-8">
-              Can&apos;t donate right now? There are many other ways to support our
-              mission and spread kindness.
+              Can&apos;t donate right now? There are many other ways to be part of
+              something bigger than a fundraiser.
             </p>
             <div className="grid sm:grid-cols-3 gap-6">
               <div className="card">
-                <h3 className="font-semibold mb-2">Share Our Story</h3>
+                <h3 className="font-semibold mb-2">Share This Campaign</h3>
                 <p className="text-sm text-[var(--color-muted-foreground)]">
-                  Spread the word on social media and help us reach more people.
+                  Share with your community. Understanding can prevent isolation.
                 </p>
               </div>
               <div className="card">
-                <h3 className="font-semibold mb-2">Volunteer</h3>
+                <h3 className="font-semibold mb-2">Leave Encouragement</h3>
                 <p className="text-sm text-[var(--color-muted-foreground)]">
-                  Join our team of dedicated volunteers making a difference.
+                  Leave a message of encouragement for families navigating autism.
                 </p>
               </div>
               <div className="card">
                 <h3 className="font-semibold mb-2">Partner With Us</h3>
                 <p className="text-sm text-[var(--color-muted-foreground)]">
-                  Businesses and organizations can partner for greater impact.
+                  Organizations can help create real community-level change.
                 </p>
               </div>
             </div>

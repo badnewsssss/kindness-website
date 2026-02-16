@@ -49,27 +49,28 @@ export function HeroSection() {
           {/* Main Headline */}
           <h1
             id="hero-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight animate-fade-in-up text-[var(--color-foreground)]"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight animate-fade-in-up"
+            style={{ color: '#111827' }}
           >
-            Kindness for Autism:{' '}
-            <span className="block sm:inline text-[var(--color-primary)]">
-              Honoring Lives & Changing the Future
+            The McKindness Foundation:{' '}
+            <span style={{ color: '#2563eb' }} className="block sm:inline">
+              Kindness for Autism
             </span>
           </h1>
 
           {/* Mission Subtext */}
           <p className="text-lg sm:text-xl lg:text-2xl text-[var(--color-muted-foreground)] mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            A journey of <strong className="text-[var(--color-foreground)]">25 years</strong>,{' '}
-            <strong className="text-[var(--color-foreground)]">52,384+ stories</strong> of kindness,
-            and a mission to support autism advocacy through compassion, understanding, and meaningful action.
+            For over <strong className="text-[var(--color-foreground)]">25 years</strong>, we have collected more than{' '}
+            <strong className="text-[var(--color-foreground)]">52,000 real stories</strong> of kindness.
+            Not theories. Not slogans. Real people stepping in during real moments when someone needed help.
           </p>
 
           {/* Supporting Text */}
           <p className="text-base sm:text-lg text-[var(--color-muted-foreground)] mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
-            Founded by Charlie Miller, honoring his son&apos;s incredible journey from
-            <span className="font-semibold text-[var(--color-primary)]"> 1lb 8oz at birth</span> to celebrating
-            <span className="font-semibold text-[var(--color-secondary)]"> 25 years of life</span>.
-            Join us in creating a future where kindness opens every door.
+            Founded by Charlie Miller, inspired by his son&apos;s life journey — born at just{' '}
+            <span className="font-semibold text-[var(--color-primary)]">1 pound 8 ounces</span>, facing impossible odds, and now celebrating{' '}
+            <span className="font-semibold text-[var(--color-secondary)]">25 years of life, strength, and resilience</span>.
+            That journey became proof that challenges do not define potential.
           </p>
 
           {/* CTA Buttons */}

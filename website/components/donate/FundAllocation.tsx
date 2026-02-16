@@ -18,25 +18,25 @@ export interface FundAllocationProps {
 
 const allocations: AllocationCategory[] = [
   {
-    name: 'Accounting & Operations',
+    name: 'Autism Advocacy & Awareness',
     percentage: 40,
     color: '#3b9af4', // Primary blue
-    description: 'Financial management, transparency, and operational costs',
-    icon: '📊',
+    description: 'Autism advocacy, rights protection, and community awareness initiatives',
+    icon: '💙',
   },
   {
-    name: 'Speaker & Programs',
+    name: 'Family Support & Education',
     percentage: 35,
     color: '#22c55e', // Secondary green
-    description: 'Guest speakers, educational events, and community programs',
-    icon: '🎤',
+    description: 'Family support resources, autism education, and kindness-based outreach programs',
+    icon: '🤝',
   },
   {
-    name: 'Legal & Compliance',
+    name: 'Stewardship & Transparency',
     percentage: 25,
     color: '#ffc425', // Autism gold
-    description: 'Legal fees, regulatory compliance, and advocacy support',
-    icon: '⚖️',
+    description: 'Professional accounting, responsible financial stewardship, and legal compliance',
+    icon: '✓',
   },
 ];
 
