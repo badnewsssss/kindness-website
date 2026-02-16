@@ -24,3 +24,9 @@ export type { GoFundMeWidgetProps } from './GoFundMeWidget';
 
 export { FundAllocation } from './FundAllocation';
 export type { FundAllocationProps, AllocationCategory } from './FundAllocation';
+
+export { PayPalDonationForm } from './PayPalDonationForm';
+export type { PayPalDonationFormProps } from './PayPalDonationForm';
+
+export { LiveDonationTotal } from './LiveDonationTotal';
+export type { LiveDonationTotalProps } from './LiveDonationTotal';

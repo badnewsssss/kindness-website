@@ -2,12 +2,10 @@ import { Metadata } from 'next';
 import { Container } from '@/components/layout';
 import {
   DonateHero,
-  FundraisingProgress,
-  DonationTiers,
   FundAllocation,
-  PayPalButton,
   GoFundMeWidget,
 } from '@/components/donate';
+import { DonatePageClient } from './DonatePageClient';
 
 export const metadata: Metadata = {
   title: 'Donate',
@@ -20,23 +18,22 @@ export default function DonatePage() {
     <>
       <DonateHero />
 
-      {/* Progress Section */}
-      <section className="section">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <FundraisingProgress raised={75000} goal={250000} />
-          </div>
-        </Container>
-      </section>
+      {/* Live Progress + Donation Form (client component) */}
+      <DonatePageClient />
 
-      {/* Donation Options */}
+      {/* GoFundMe Option */}
       <section className="section bg-[var(--color-muted)]">
         <Container>
-          <DonationTiers />
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
-            <PayPalButton />
-            <GoFundMeWidget />
+          <div className="mx-auto max-w-2xl text-center mb-8">
+            <h2 className="mb-2 text-2xl font-bold text-[var(--color-foreground)] md:text-3xl">
+              Also on GoFundMe
+            </h2>
+            <p className="text-[var(--color-muted-foreground)]">
+              Prefer to donate through GoFundMe? Visit our campaign page.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <GoFundMeWidget variant="banner" />
           </div>
         </Container>
       </section>
