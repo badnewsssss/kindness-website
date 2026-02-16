@@ -29,12 +29,21 @@ export interface DonationData {
   gofundmeLastUpdated: string | null;
 }
 
-// In-memory store (resets on cold start, but payments are safe in PayPal)
+// In-memory store seeded with confirmed PayPal donations
 let donationData: DonationData = {
-  totalRaised: 0,
-  donationCount: 0,
+  totalRaised: 5,
+  donationCount: 1,
   goal: 250000,
-  donations: [],
+  donations: [
+    {
+      id: 'don_seed_1',
+      amount: 5,
+      currency: 'USD',
+      paypalOrderId: 'confirmed',
+      timestamp: '2026-02-15T00:00:00.000Z',
+      status: 'completed',
+    },
+  ],
   gofundmeOffset: 0,
   gofundmeDonorCount: 0,
   gofundmeLastUpdated: null,
