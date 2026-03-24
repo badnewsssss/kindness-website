@@ -10,7 +10,7 @@ export const stories: Story[] = [
     author: { name: 'Emma Williams', location: 'Austin, TX' },
     date: '2024-11-15',
     image: {
-      src: '/images/stories/story-001.jpg',
+      src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&q=80',
       alt: 'Two students drawing together at a lunch table',
     },
     featured: true,
@@ -26,7 +26,7 @@ export const stories: Story[] = [
     author: { name: 'Jake Martinez', location: 'Portland, OR' },
     date: '2024-10-22',
     image: {
-      src: '/images/stories/story-002.jpg',
+      src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&h=600&fit=crop&q=80',
       alt: 'A barista communicating with a customer using sign language',
     },
     featured: true,
@@ -42,7 +42,7 @@ export const stories: Story[] = [
     author: { name: 'The Thompson Family', location: 'Denver, CO' },
     date: '2024-09-30',
     image: {
-      src: '/images/stories/story-003.jpg',
+      src: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?w=800&h=600&fit=crop&q=80',
       alt: 'Children of various abilities playing together in a park',
     },
     featured: false,
@@ -58,7 +58,7 @@ export const stories: Story[] = [
     author: { name: 'David Chen', location: 'San Francisco, CA' },
     date: '2024-08-18',
     image: {
-      src: '/images/stories/story-004.jpg',
+      src: 'https://images.unsplash.com/photo-1516733968668-dbdce39c0651?w=800&h=600&fit=crop&q=80',
       alt: 'Two brothers smiling together',
     },
     featured: false,
@@ -74,7 +74,7 @@ export const stories: Story[] = [
     author: { name: 'Patricia Rodriguez', location: 'Seattle, WA' },
     date: '2024-07-25',
     image: {
-      src: '/images/stories/story-005.jpg',
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80',
       alt: 'An inclusive modern office workspace',
     },
     featured: false,
@@ -90,7 +90,7 @@ export const stories: Story[] = [
     author: { name: 'Maria Gonzalez', location: 'Phoenix, AZ' },
     date: '2024-12-03',
     image: {
-      src: '/images/stories/story-006.jpg',
+      src: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&h=600&fit=crop&q=80',
       alt: 'A young boy walking in a park surrounded by neighbors',
     },
     featured: false,
