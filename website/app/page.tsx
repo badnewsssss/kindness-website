@@ -7,6 +7,7 @@ import {
   FeaturedStories,
   DonationCTA,
   CoinOfBlessings,
+  InspirationQuotes,
 } from '@/components/home';
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function HomePage() {
       />
       <ImpactStats />
       <FeaturedStories />
+      <InspirationQuotes />
       <CoinOfBlessings />
       <DonationCTA />
     </>
