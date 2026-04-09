@@ -1,8 +1,19 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { Container } from '@/components/layout';
-import { LiveDonationTotal, PayPalDonationForm } from '@/components/donate';
+import { LiveDonationTotal } from '@/components/donate';
+
+// Dynamically import PayPal form with SSR disabled to prevent
+// prerender errors (PayPal hooks require browser context)
+const PayPalDonationForm = dynamic(
+  () =>
+    import('@/components/donate/PayPalDonationForm').then(
+      (mod) => mod.PayPalDonationForm
+    ),
+  { ssr: false, loading: () => <div className="h-96 animate-pulse rounded-2xl bg-gray-100" /> }
+);
 
 /**
  * Client-side portion of the donate page.

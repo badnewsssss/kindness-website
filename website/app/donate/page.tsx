@@ -7,6 +7,8 @@ import {
 } from '@/components/donate';
 import { DonatePageClient } from './DonatePageClient';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Donate',
   description:
